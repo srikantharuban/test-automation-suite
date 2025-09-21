@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParaBank Test Execution Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2196F3;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #2196F3;
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .summary-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2196F3;
+            text-align: center;
+        }
+        .summary-card h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .summary-card .number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2196F3;
+        }
+        .test-case {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .test-case-header {
+            background: #2196F3;
+            color: white;
+            padding: 15px 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .test-case-body {
+            padding: 20px;
+        }
+        .status-passed {
+            background: #4CAF50;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .status-failed {
+            background: #f44336;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .test-steps {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .test-steps h4 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .step {
+            margin: 8px 0;
+            padding: 8px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+        .step:last-child {
+            border-bottom: none;
+        }
+        .step-number {
+            font-weight: bold;
+            color: #2196F3;
+            margin-right: 10px;
+        }
+        .verification {
+            background: #e8f5e8;
+            border-left: 4px solid #4CAF50;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .verification h4 {
+            margin: 0 0 10px 0;
+            color: #2e7d32;
+        }
+        .metadata {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        .metadata-item {
+            display: flex;
+            justify-content: space-between;
+        }
+        .metadata-item strong {
+            color: #333;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .pass-rate {
+            font-size: 1.5em;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ParaBank Test Execution Report</h1>
+            <p>Automated Test Results - September 19, 2025</p>
+        </div>
+
+        <div class="summary">
+            <div class="summary-card">
+                <h3>Total Test Cases</h3>
+                <div class="number">2</div>
+            </div>
+            <div class="summary-card">
+                <h3>Passed</h3>
+                <div class="number" style="color: #4CAF50;">2</div>
+            </div>
+            <div class="summary-card">
+                <h3>Failed</h3>
+                <div class="number" style="color: #f44336;">0</div>
+            </div>
+            <div class="summary-card">
+                <h3>Pass Rate</h3>
+                <div class="pass-rate">100%</div>
+            </div>
+        </div>
+
+        <!-- Test Case 1 -->
+        <div class="test-case">
+            <div class="test-case-header">
+                TC 001 - Verify that user can register a new customer
+            </div>
+            <div class="test-case-body">
+                <div class="status-passed">✓ PASSED</div>
+                
+                <div class="test-steps">
+                    <h4>Test Steps Executed:</h4>
+                    <div class="step">
+                        <span class="step-number">1.</span>Navigate to https://parabank.parasoft.com/parabank/index.htm
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2.</span>Click on the Register link
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3.</span>Fill the registration page with user details:
+                        <ul style="margin: 10px 0; padding-left: 30px;">
+                            <li>First Name: TestUser</li>
+                            <li>Last Name: Automation</li>
+                            <li>Address: 456 Test Avenue</li>
+                            <li>City: Test City</li>
+                            <li>State: CA</li>
+                            <li>Zip Code: 90210</li>
+                            <li>Phone: 555-999-8888</li>
+                            <li>SSN: 987-65-4321</li>
+                        </ul>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4.</span>Use unique username: testuser20250919_001
+                    </div>
+                    <div class="step">
+                        <span class="step-number">5.</span>Use password: TestPass123!
+                    </div>
+                    <div class="step">
+                        <span class="step-number">6.</span>Submit the form by clicking on the Register button
+                    </div>
+                </div>
+
+                <div class="verification">
+                    <h4>Verification Results:</h4>
+                    <ul>
+                        <li>✓ Page title changed to "ParaBank | Customer Created"</li>
+                        <li>✓ Welcome message with username "Welcome testuser20250919_001" displayed</li>
+                        <li>✓ Success message "Your account was created successfully. You are now logged in." displayed</li>
+                        <li>✓ User automatically logged in with access to account services</li>
+                        <li>✓ Personal greeting "Welcome TestUser Automation" shown in sidebar</li>
+                    </ul>
+                </div>
+
+                <div class="metadata">
+                    <div class="metadata-item">
+                        <span><strong>Execution Time:</strong></span>
+                        <span>September 19, 2025 - Completed Successfully</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span><strong>Test Environment:</strong></span>
+                        <span>https://parabank.parasoft.com/parabank</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span><strong>Browser:</strong></span>
+                        <span>Playwright Automation</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span><strong>Result:</strong></span>
+                        <span style="color: #4CAF50; font-weight: bold;">PASS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Test Case 2 -->
+        <div class="test-case">
+            <div class="test-case-header">
+                TC 002 - Verify user login functionality with valid credentials
+            </div>
+            <div class="test-case-body">
+                <div class="status-passed">✓ PASSED</div>
+                
+                <div class="test-steps">
+                    <h4>Test Steps Executed:</h4>
+                    <div class="step">
+                        <span class="step-number">1.</span>Navigate to https://parabank.parasoft.com/parabank/index.htm
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2.</span>Enter valid username: testuser20250919_001
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3.</span>Enter valid password: TestPass123!
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4.</span>Click on the "Log In" button
+                    </div>
+                </div>
+
+                <div class="verification">
+                    <h4>Verification Results:</h4>
+                    <ul>
+                        <li>✓ User successfully logged in (redirected to overview.htm)</li>
+                        <li>✓ Account overview page displayed with title "ParaBank | Accounts Overview"</li>
+                        <li>✓ "Welcome TestUser Automation" message displayed in sidebar</li>
+                        <li>✓ Account information displayed in accounts overview table</li>
+                        <li>✓ Account balance and available amount shown ($515.50)</li>
+                        <li>✓ Full account services menu accessible</li>
+                    </ul>
+                </div>
+
+                <div class="metadata">
+                    <div class="metadata-item">
+                        <span><strong>Execution Time:</strong></span>
+                        <span>September 19, 2025 - Completed Successfully</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span><strong>Test Environment:</strong></span>
+                        <span>https://parabank.parasoft.com/parabank</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span><strong>Browser:</strong></span>
+                        <span>Playwright Automation</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span><strong>Result:</strong></span>
+                        <span style="color: #4CAF50; font-weight: bold;">PASS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Test Automation Report Generated by GitHub Copilot</strong></p>
+            <p>Test execution completed on September 19, 2025 using Playwright MCP tools</p>
+            <p>All test cases executed successfully with 100% pass rate</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "name": "parabank-automation-tests",
+  "version": "1.0.0",
+  "description": "ParaBank automated test suite using Playwright for CI/CD pipeline",
+  "main": "test.js",
+  "scripts": {
+    "test": "node test.js",
+    "test:chromium": "BROWSER=chromium node test.js",
+    "test:firefox": "BROWSER=firefox node test.js", 
+    "test:webkit": "BROWSER=webkit node test.js",
+    "test:headed": "CI=false node test.js",
+    "install-browsers": "npx playwright install",
+    "ci": "npm run install-browsers && npm test"
+  },
+  "keywords": [
+    "testing",
+    "automation", 
+    "playwright",
+    "parabank",
+    "ci-cd",
+    "github-actions"
+  ],
+  "author": "Test Automation Engineer",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.40.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srikantharuban/practicesession_02.git"
+  }
+}
